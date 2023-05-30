@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class mainNews {
 
     private String status, totalResults;
-    private ArrayList<NewsModel> newsModelArrayList;
+    private ArrayList<NewsModel> articles;
 
-    public mainNews(String status, String totalResults, ArrayList<NewsModel> newsModelArrayList) {
+    public mainNews(String status, String totalResults, ArrayList<NewsModel> articles) {
         this.status = status;
         this.totalResults = totalResults;
-        this.newsModelArrayList = newsModelArrayList;
+        this.articles = articles;
     }
 
     public String getStatus() {
@@ -29,11 +29,11 @@ public class mainNews {
         this.totalResults = totalResults;
     }
 
-    public ArrayList<NewsModel> getNewsModelArrayList() {
-        return newsModelArrayList;
+    public ArrayList<NewsModel> getArticles() {
+        return articles;
     }
 
-    public void setNewsModelArrayList(ArrayList<NewsModel> newsModelArrayList) {
-        this.newsModelArrayList = newsModelArrayList;
+    public void setArticles(ArrayList<NewsModel> articles) {
+        this.articles = articles;
     }
 }

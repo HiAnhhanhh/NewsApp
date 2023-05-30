@@ -22,12 +22,12 @@ public interface ApiService {
 
     @GET("top-headlines")
     Call<mainNews> getNews (@Query("country") String country,
-                            @Query("pageSize") String pageSize,
+                            @Query("pageSize") int pageSize,
                             @Query("apiKey")String apiKey);
 
     @GET("top-headlines")
     Call<mainNews> getCategoryNews (@Query("country") String country,
                             @Query("category") String category,
-                            @Query("pageSize") String pageSize,
+                            @Query("pageSize") int pageSize,
                             @Query("apiKey")String apiKey);
 }
