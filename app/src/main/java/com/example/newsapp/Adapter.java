@@ -1,6 +1,7 @@
 package com.example.newsapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.author.setText(newsModel.getAuthor());
 
         Glide.with(context).load(newsModel.getUrlToImage()).into(holder.imageView);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, NewsWebView.class);
+                intent.putExtra("url", newsModelArrayList.get(holder.getAdapterPosition()).getUrl());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
